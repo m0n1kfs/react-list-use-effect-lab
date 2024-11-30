@@ -1,13 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/ui/navbar/navbar.jsx';
 import Home from './components/ui/home/home.jsx';
+import PageLayout from "./components/ui/layouts/PageLayout.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<PageLayout><Home /></PageLayout>} />
       </Routes>
     </>
   );
